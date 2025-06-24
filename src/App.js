@@ -1,10 +1,13 @@
 import "./App.css";
 import Body from "./components/Body";
+import { Provider } from "react-redux";
+import appStore from "./components/utils/appstore";
 function App() {
   return (
     <div className="w-screen h-screen bg-black text-white">
-      {/* <div className="text-3xl font-bold underline">Hello, World!</div>; */}
-      <Body />
+      <Provider store={appStore}>
+        <Body />
+      </Provider>
     </div>
   );
 }
