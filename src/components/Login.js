@@ -10,11 +10,10 @@ import {
 import { auth } from "../components/utils/firebaseconfig";
 import { useDispatch } from "react-redux";
 import { addUser } from "../components/utils/userSlice";
-import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+
   const [isSigninform, setIsSigninform] = React.useState(false);
   const [isvalid, setIsvalid] = React.useState(true);
   const [isvalidmsg, setIsvalidmsg] = React.useState(null);
@@ -45,8 +44,6 @@ const Login = () => {
                   email: email,
                 })
               );
-              console.log("sigup in sucess");
-              navigate("/browse");
             })
             .catch((error) => {
               // An error occurred
@@ -62,8 +59,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
