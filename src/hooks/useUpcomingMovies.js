@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 const useUpcomingMovies = () => {
   const dispatch = useDispatch();
-  const { upcomingMovies } = useSelector((state) => state.movie.upcomingMovies);
+  const upcomingMovies = useSelector((state) => state.movie.upcomingMovies);
   const getaddupcomingMovies = async () => {
     const data = await fetch(
       "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1",

@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 const usePopularMovies = () => {
   const dispatch = useDispatch();
-  const { popularMovies } = useSelector((state) => state.movie.popularMovies);
+  const popularMovies = useSelector((state) => state.movie.popularMovies);
 
   const getaddPopularMovies = async () => {
     const data = await fetch(

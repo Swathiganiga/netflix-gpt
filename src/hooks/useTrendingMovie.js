@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 const useTrendingMovies = () => {
   const dispatch = useDispatch();
-  const { trendingMovies } = useSelector((state) => state.movie.trendingMovies);
+  const trendingMovies = useSelector((state) => state.movie.trendingMovies);
   const getaddPopularMovies = async () => {
     const data = await fetch(
       "https:////api.themoviedb.org/3/trending/movie/day?language=en-US",
