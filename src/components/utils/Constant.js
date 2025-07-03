@@ -8,8 +8,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0ODkzZDQ0NDYxNTM0MWQwYTc3YTRlNGM3YTI2YmI0YSIsIm5iZiI6MTc1MDgzMjMxNC45NzksInN1YiI6IjY4NWI5NGJhZjdiOWRlM2Q2ODkxYjM1ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QHa14DFfetEXtRa_m-tNmHqqZjlIFQjiCB77O1uaAg4",
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
@@ -26,5 +25,6 @@ export const SUPPORTED_LANGUAGES = [
 
 export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
 export const Movieurl = "https://api.themoviedb.org/3/movie/now_playing?page=5";
+
 export const movieVediourl =
   "https://api.themoviedb.org/3/movie/574475/videos?language=en-US";
