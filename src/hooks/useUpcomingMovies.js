@@ -18,6 +18,6 @@ const useUpcomingMovies = () => {
   };
   useEffect(() => {
     !upcomingMovies && getaddupcomingMovies();
-  }, [dispatch]);
+  }, [getaddupcomingMovies, dispatch]);
 };
 export default useUpcomingMovies;

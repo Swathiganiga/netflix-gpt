@@ -18,6 +18,6 @@ const useTrendingMovies = () => {
   };
   useEffect(() => {
     !trendingMovies && getaddPopularMovies();
-  }, [trendingMovies]);
+  }, [getaddPopularMovies, dispatch]);
 };
 export default useTrendingMovies;
