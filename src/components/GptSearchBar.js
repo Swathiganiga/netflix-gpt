@@ -3,9 +3,9 @@ import lang from "./utils/languageConstants";
 import { useSelector } from "react-redux";
 import { useRef } from "react";
 import { addGptMovieResult } from "./utils/gptSlice";
-import { API_OPTIONS, OPENAI_KEY } from "./utils/Constant";
+import { API_OPTIONS } from "./utils/Constant";
 import { useDispatch } from "react-redux";
-import openai from "./utils/openai"; // Assuming you have a file for OpenAI configuration
+// Assuming you have a file for OpenAI configuration
 const GptSearchBar = () => {
   const dispatch = useDispatch();
   const searchMovieTMDB = async (movie) => {
@@ -20,10 +20,6 @@ const GptSearchBar = () => {
     return json.results;
   };
   const handleGptSearchClick = async () => {
-    const gptQuery =
-      "Act as a Movie Recommendation system and suggest some movies for the query : " +
-      searchText.current.value +
-      ". only give me names of 5 movies, comma seperated like the example result given ahead. Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya";
     // const gptResults = await openai.chat.completions.create({
     //   messages: [{ role: "user", content: gptQuery }],
     //   model: "gpt-4.1",

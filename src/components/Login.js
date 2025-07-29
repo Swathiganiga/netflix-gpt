@@ -31,7 +31,7 @@ const Login = () => {
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           // Signed up
-          const user = userCredential.user;
+
           updateProfile(auth.currentUser, {
             displayName: nameRef.current.value,
           })
@@ -50,10 +50,7 @@ const Login = () => {
               // ...
             });
         })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-        });
+        .catch((error) => {});
     } else {
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
