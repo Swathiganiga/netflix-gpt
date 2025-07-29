@@ -16,7 +16,7 @@ const useNowPlayingMovies = () => {
   };
   useEffect(() => {
     !nowPlayingMovies && getNowPlayingMovies();
-  }, []);
+  }, [nowPlayingMovies]);
 };
 export default useNowPlayingMovies;
 // This custom hook fetches the now playing movies from the API and dispatches them to the Redux store.

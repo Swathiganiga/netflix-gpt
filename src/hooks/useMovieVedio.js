@@ -21,7 +21,7 @@ const useMovieVedio = (id) => {
   };
   useEffect(() => {
     !movieVedio && getMoviesVedio();
-  }, []);
+  }, [movieVedio]);
 };
 export default useMovieVedio;
 // This custom hook fetches the now playing movies from the API and dispatches them to the Redux store.

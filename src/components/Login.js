@@ -29,7 +29,7 @@ const Login = () => {
     setIsvalidmsg(isvalid.message);
     if (!isSigninform) {
       createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
+        .then(() => {
           // Signed up
 
           updateProfile(auth.currentUser, {
@@ -57,10 +57,7 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
         })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-        });
+        .catch(() => {});
     }
   };
 
